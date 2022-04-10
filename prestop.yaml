@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: prestop
+spec:
+  containers:
+  - name: prestop
+    image: wangcloud.azurecr.io/httpserver:v0.0.1
+    lifecycle:
+      preStop:
+        exec:
+          command: 
+            - /stop.sh

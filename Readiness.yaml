@@ -1,0 +1,7 @@
+readinessProbe:
+    httpGet:
+      path: /healthz
+      port: 8000
+      scheme: HTTP
+    initialDelaySeconds: 5
+    periodSeconds: 3
