@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: httpserver-80
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: httpserver-80.51.cafe
+      http:
+        paths:
+          - backend:
+              service:
+                name: httpserver
+                port: 
+                  number: 80
+            path: /
+            pathType: Prefix

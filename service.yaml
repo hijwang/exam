@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  selector:
+    app: myapp
+  type: ExternalName
+  externalName: www.example.com. my.database.example.com
+  ports:
+  - port: 80
+    protocol: TCP
+    name: http
