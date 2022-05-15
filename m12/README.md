@@ -5,3 +5,4 @@
 #kubectl create ns httpserver  
 #kubectl label ns httpserver istio-injection=enabled  
 #kubectl create -f httpserver.yaml -n httpserver  
+```curl --resolve httpsserver.cncamp.io:443:172.21.0.10 https://httpsserver.cncamp.io/healthz -v -k```
